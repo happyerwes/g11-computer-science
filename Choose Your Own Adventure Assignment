@@ -1,0 +1,115 @@
+from time import sleep
+seconds = 1
+while True:
+    print("You are one of the operator in a simulate assault.")
+    sleep(seconds)
+    print("You have one hostage and a boom that is not located in the building")
+    sleep(seconds)
+    floor = input("You can chose to break in and take out the hostage or break in to defuse the boom chose the floor you want to go in(1/2):")
+    if floor == "1":
+        print("first floor have two hostage not located within the first floor, annihilate all enemies or evacuate hostages")
+        sleep(seconds)
+        entrance = input("You want to just run in or use the Drone for information before running in?(use_drone, run_in)")
+        if entrance == "use_drone":
+            print("Hostage found, first floor in blue bar there is 18 been found in the building")
+            sleep(seconds)
+            print("you have 5:00 minutes max to finish this operation, be mindful for those mines within those hallways")
+            action = input("Now you are with the hostage you want to evacuate the hostage or defend the hostage and annihilate all enemies (evacuate/defend):")
+            if action == "evacuate":
+               print("teammate:hostage room clear, time to move.")
+               sleep(seconds)
+               print("hostage have been clear, four ememies have been eliminate, mission success.")
+               print("player used time: 3:20")
+            elif action == "defend":
+                print("hostage room clear, barricade the windows and walls ready for attack from enemies.")
+                sleep(seconds)
+                print("six enemies down, two teammate injured.")
+                print("player used time 4:55, mission success")
+            else:
+                print("action not available, please chose between:(evacuate/defend)")
+        elif entrance == "run_in":
+            print("teammate:3,2,1,open.")
+            sleep(seconds)
+            print("teammate:two over CCTV, footsteps.")
+            sleep(seconds)
+            print("teammate: teammate down, teammate down. traps ahead, retreat, retreat.")
+            decision = input("retreat and follow your teammate or continued the mission(retreat/continued):")
+            if decision == "retreat":
+                print("retreat, retreat, retreat, evacuate the building immediately.")
+                sleep(seconds)
+                print("hostage killed by enemies, mission is a failure.")
+                sleep(seconds)
+                print("player used time 0:48")
+            elif decision == "continued":
+                print("two enemies ahead.")
+                sleep(seconds)
+                print("player:miss fire, miss fire, miss fire...")
+                sleep(seconds)
+                print("miss fire, hostage killed.")
+                sleep(seconds)
+                print("mission is a failure")
+                sleep(seconds)
+                print("player used time 1:47")
+            else:
+                print("action is not available, please make decision in between:(retreat/continued)")
+        else:
+            print("aciton is not available, please chose in between:(use_drone/run_in)")
+    elif floor == "2":
+        print("second floor have one boom thraet that not located,eliminate enemies and defuse the boom.")
+        sleep(seconds)
+        print("You have 5:00 before the boom go off")
+        enter = input("You want to just run in or use the Drone for information before running in?(Use_drone,Run_in)")
+        if enter == "Use_drone":
+            print("boom found, second floor main bedroom seven enemies have been located, mind for traps.")
+            sleep(seconds)
+            operation = input("operation is confirmed, rush in eliminate enemies or focus on defuse the boom?(eliminate_enemies/defuse_boom)")
+            if operation == "eliminate_enemies":
+                print("(gun fires) teammate: it takes too long time we can't finish them all in time.")
+                sleep(seconds)
+                print("teammate:is almost time, we need to go.")
+                sleep(seconds)
+                print("5:00, over time, mission failed")
+                sleep(seconds)
+                print("shit, that take too much time.")
+            elif operation == "defuse_boom":
+                print("teammate:hallways is clear go in.")
+                sleep(seconds)
+                print("player:you hold this door way, I use the case to defuse the boom.")
+                sleep(seconds)
+                print("beep..beep..beep")
+                sleep(seconds)
+                print("teammate:ncoming, from south.")
+                sleep(seconds)
+                print("boom defuse,time to move!")
+                sleep(seconds)
+                print("building clear, mission success")
+                sleep(seconds)
+                print("player used time 4:28")
+            else:
+                print("option not available,please pick in between (eliminate_enemies/defuse_boom)")
+        elif enter == "Run_in":
+            print("player: don't waste time on drones we only have five minutes,we need to move.")
+            sleep(seconds)
+            print("player:where is the thing, is it even in second floor?")
+            sleep(seconds)
+            print("there is pins all over the ground!")
+            sleep(seconds)
+            print("teammate:footsteps from both ahead and behide")
+            sleep(seconds)
+            print("player:getting hit")
+            print("teammate:retreat, retreat!")
+            sleep(seconds)
+            print("two player injured, mission failed")
+            print("time 2:30")
+        else:
+            print("aciton is not available, please chose in between:(use_drone/run_in)")
+    else:
+        print("aciton is not available, please chose in between:floor(1/2)")
+
+
+    play_again = input("Do you want to play again? (yes/no): ")
+    if play_again == "yes":
+        print("Starting over...")
+    else:
+        print("thanks for playing!")
+        break
